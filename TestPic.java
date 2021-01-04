@@ -10,12 +10,13 @@ public class TestPic
         pic.setTitle("Shapes Constructor Test Picture");
         
         // Draw my picture
-        Rect r = new Rect();
-        r.makeVisible();
-        r.changeColor("brown");
-        r.moveHorizontal(75);
-        r.moveVertical(120);
-        r.changeSize(90);
+        
+        Rect background = new Rect();
+        background.makeVisible();
+        background.changeColor("blue");
+        background.changeSize(4000);
+        background.moveHorizontal(-700);
+        background.moveVertical(-500);
         
         Circle a = new Circle();
         a.makeVisible();
@@ -37,6 +38,48 @@ public class TestPic
         c.moveVertical(220);
         c.moveHorizontal(-100);
         c.changeSize(600);
+        
+        Rect d = new Rect();
+        d.makeVisible();
+        d.changeColor("red");
+        d.moveHorizontal(75);
+        d.moveVertical(120);
+        d.changeSize(90);
+        
+        Rect f = new Rect();
+        f.makeVisible();
+        f.changeColor("cyan");
+        f.moveHorizontal(80);
+        f.moveVertical(145);
+        f.changeSize(40, 20);
+        
+        Rect g = new Rect();
+        g.makeVisible();
+        g.changeColor("cyan");
+        g.moveHorizontal(140);
+        g.moveVertical(145);
+        g.changeSize(40, 20);
+        
+        Rect h = new Rect();
+        h.makeVisible();
+        h.changeColor("black");
+        h.moveHorizontal(105);
+        h.moveVertical(155);
+        h.changeSize(55, 30);
+        
+        Triangle i = new Triangle();
+        i.makeVisible();
+        i.changeColor("brown");
+        i.moveHorizontal(220);
+        i.moveVertical(45);
+        i.changeSize(60,100);
+        
+        Circle j = new Circle();
+        j.makeVisible();
+        j.changeColor("yellow");
+        j.moveHorizontal(400);
+        j.moveVertical(-70);
+        j.changeSize(150);
 
         // Save the picture to a file
         String filename = "testpic.png";
