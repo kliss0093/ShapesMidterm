@@ -12,6 +12,31 @@ public class TestPic
         // Draw my picture
         Rect r = new Rect();
         r.makeVisible();
+        r.changeColor("brown");
+        r.moveHorizontal(75);
+        r.moveVertical(120);
+        r.changeSize(90);
+        
+        Circle a = new Circle();
+        a.makeVisible();
+        a.changeColor("green");
+        a.moveVertical(250);
+        a.moveHorizontal(-150);
+        a.changeSize(1500);
+        
+        Circle b = new Circle();
+        b.makeVisible();
+        b.changeColor("green");
+        b.moveVertical(170);
+        b.moveHorizontal(-700);
+        b.changeSize(900);
+        
+        Circle c = new Circle();
+        c.makeVisible();
+        c.changeColor("green");
+        c.moveVertical(220);
+        c.moveHorizontal(-100);
+        c.changeSize(600);
 
         // Save the picture to a file
         String filename = "testpic.png";
