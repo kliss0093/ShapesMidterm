@@ -80,7 +80,31 @@ public class TestPic
         j.moveHorizontal(400);
         j.moveVertical(-70);
         j.changeSize(150);
-
+        
+        Arc k = new Arc();
+        k.makeVisible();
+        k.changeColor("white");
+        k.changeArcBeginning(0);
+        k.changeArcEnd(180);
+        k.changeSize(200);
+        
+        Arc l = new Arc();
+        l.makeVisible();
+        l.changeColor("white");
+        l.changeArcBeginning(0);
+        l.changeArcEnd(180);
+        l.changeSize(200);
+        l.moveHorizontal(150);
+        
+        
+        Arc m = new Arc();
+        m.makeVisible();
+        m.changeColor("white");
+        m.changeArcBeginning(0);
+        m.changeArcEnd(180);
+        m.changeSize(200);
+        m.moveHorizontal(70);
+        m.moveVertical(-60);
         // Save the picture to a file
         String filename = "testpic.png";
         try {
