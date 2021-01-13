@@ -10,9 +10,101 @@ public class TestPic
         pic.setTitle("Shapes Constructor Test Picture");
         
         // Draw my picture
-        Rect r = new Rect();
-        r.makeVisible();
-
+        
+        Rect background = new Rect();
+        background.makeVisible();
+        background.changeColor("blue");
+        background.changeSize(4000);
+        background.moveHorizontal(-700);
+        background.moveVertical(-500);
+        
+        Circle a = new Circle();
+        a.makeVisible();
+        a.changeColor("green");
+        a.moveVertical(250);
+        a.moveHorizontal(-150);
+        a.changeSize(1500);
+        
+        Circle b = new Circle();
+        b.makeVisible();
+        b.changeColor("green");
+        b.moveVertical(170);
+        b.moveHorizontal(-700);
+        b.changeSize(900);
+        
+        Circle c = new Circle();
+        c.makeVisible();
+        c.changeColor("green");
+        c.moveVertical(220);
+        c.moveHorizontal(-100);
+        c.changeSize(600);
+        
+        Rect d = new Rect();
+        d.makeVisible();
+        d.changeColor("red");
+        d.moveHorizontal(75);
+        d.moveVertical(120);
+        d.changeSize(90);
+        
+        Rect f = new Rect();
+        f.makeVisible();
+        f.changeColor("cyan");
+        f.moveHorizontal(80);
+        f.moveVertical(145);
+        f.changeSize(40, 20);
+        
+        Rect g = new Rect();
+        g.makeVisible();
+        g.changeColor("cyan");
+        g.moveHorizontal(140);
+        g.moveVertical(145);
+        g.changeSize(40, 20);
+        
+        Rect h = new Rect();
+        h.makeVisible();
+        h.changeColor("black");
+        h.moveHorizontal(105);
+        h.moveVertical(155);
+        h.changeSize(55, 30);
+        
+        Triangle i = new Triangle();
+        i.makeVisible();
+        i.changeColor("brown");
+        i.moveHorizontal(220);
+        i.moveVertical(45);
+        i.changeSize(60,100);
+        
+        Circle j = new Circle();
+        j.makeVisible();
+        j.changeColor("yellow");
+        j.moveHorizontal(400);
+        j.moveVertical(-70);
+        j.changeSize(150);
+        
+        Arc k = new Arc();
+        k.makeVisible();
+        k.changeColor("white");
+        k.changeArcBeginning(0);
+        k.changeArcEnd(180);
+        k.changeSize(200);
+        
+        Arc l = new Arc();
+        l.makeVisible();
+        l.changeColor("white");
+        l.changeArcBeginning(0);
+        l.changeArcEnd(180);
+        l.changeSize(200);
+        l.moveHorizontal(150);
+        
+        
+        Arc m = new Arc();
+        m.makeVisible();
+        m.changeColor("white");
+        m.changeArcBeginning(0);
+        m.changeArcEnd(180);
+        m.changeSize(200);
+        m.moveHorizontal(70);
+        m.moveVertical(-60);
         // Save the picture to a file
         String filename = "testpic.png";
         try {
