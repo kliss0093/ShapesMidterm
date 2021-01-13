@@ -13,12 +13,16 @@ public class Picture {
     public static void main(String[] args) {
         // Get a reference to the canvas for this drawing
         Canvas pic = Canvas.getCanvas();
+        
+        // Sets up random variable and int variable for later use
+        int ranNumber = (int)(Math.random()*3);
+        int number = 1;
 
         // Set the title and background for the picture
-        pic.setTitle("My Picture");
+        pic.setTitle("House on the Hill / Kyle Liss");
         pic.setBackgroundColor("white");
 
-        // Draw my picture
+        // Draw my background
         Rect background = new Rect();
         background.makeVisible();
         background.changeColor("blue");
@@ -26,6 +30,7 @@ public class Picture {
         background.moveHorizontal(-700);
         background.moveVertical(-500);
         
+        // Creates first hill in picture
         Circle a = new Circle();
         a.makeVisible();
         a.changeColor("green");
@@ -33,6 +38,7 @@ public class Picture {
         a.moveHorizontal(-150);
         a.changeSize(1500);
         
+        // Creates second hill in picture
         Circle b = new Circle();
         b.makeVisible();
         b.changeColor("green");
@@ -40,6 +46,7 @@ public class Picture {
         b.moveHorizontal(-700);
         b.changeSize(900);
         
+        // Creates third hill in picture
         Circle c = new Circle();
         c.makeVisible();
         c.changeColor("green");
@@ -47,13 +54,25 @@ public class Picture {
         c.moveHorizontal(-100);
         c.changeSize(600);
         
+        // Creates body of the house
         Rect d = new Rect();
         d.makeVisible();
-        d.changeColor("red");
         d.moveHorizontal(75);
         d.moveVertical(120);
         d.changeSize(90);
-        
+        if(ranNumber == 1)
+        {
+            d.changeColor("red");
+        }
+        else if(ranNumber == 2)
+        {
+            d.changeColor("yellow");
+        }
+        else
+        {
+            d.changeColor("magenta");
+        }
+        // Creates first window of the house
         Rect f = new Rect();
         f.makeVisible();
         f.changeColor("cyan");
@@ -61,6 +80,7 @@ public class Picture {
         f.moveVertical(145);
         f.changeSize(40, 20);
         
+        // Creates second window on the house
         Rect g = new Rect();
         g.makeVisible();
         g.changeColor("cyan");
@@ -68,6 +88,7 @@ public class Picture {
         g.moveVertical(145);
         g.changeSize(40, 20);
         
+        // Creates door of the house
         Rect h = new Rect();
         h.makeVisible();
         h.changeColor("black");
@@ -75,6 +96,7 @@ public class Picture {
         h.moveVertical(155);
         h.changeSize(55, 30);
         
+        // Creates roof of the house
         Triangle i = new Triangle();
         i.makeVisible();
         i.changeColor("brown");
@@ -82,6 +104,7 @@ public class Picture {
         i.moveVertical(45);
         i.changeSize(60,100);
         
+        // Creates the sun in the top right hand corner
         Circle j = new Circle();
         j.makeVisible();
         j.changeColor("yellow");
@@ -89,6 +112,7 @@ public class Picture {
         j.moveVertical(-70);
         j.changeSize(150);
         
+        // Creates first part of the cloud
         Arc k = new Arc();
         k.makeVisible();
         k.changeColor("white");
@@ -96,24 +120,23 @@ public class Picture {
         k.changeArcEnd(180);
         k.changeSize(200);
         
-        Arc l = new Arc();
-        l.makeVisible();
-        l.changeColor("white");
-        l.changeArcBeginning(0);
-        l.changeArcEnd(180);
-        l.changeSize(200);
-        l.moveHorizontal(150);
+        // Creates second part of the cloud
+        Arc l = new Arc(250, 70, 200, 0, 180, "white", true);
         
-        
+        // Creates third part of the cloud
         Arc m = new Arc();
         m.makeVisible();
         m.changeColor("white");
         m.changeArcBeginning(0);
         m.changeArcEnd(180);
         m.changeSize(200);
-        m.moveHorizontal(70);
-        m.moveVertical(-60);
-
+        while(number < 3)
+        {
+            m.moveHorizontal(35);
+            m.moveVertical(-30);
+            number++;
+        }
+        
         // Get the filename to save to from the command line arguments, defaulting to
         // MyPicture.png if no argument is given
         String filename;

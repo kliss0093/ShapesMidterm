@@ -93,7 +93,7 @@ public class Rect
     {
         xPosition += distance;
     }
-
+    
     /**
      * Move the rectangle vertically by 'distance' pixels.
      * @param distance the distance to move the rectangle along the y axis, 

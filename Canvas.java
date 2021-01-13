@@ -91,7 +91,7 @@ public class Canvas {
 
             canvas = new CanvasPane();
             frame.add(canvas);
-            frame.setTitle(title);
+            frame.setTitle("House on the Hill");
             frame.setLocation(30, 30);
             canvas.setPreferredSize(new Dimension(width, height));
 
