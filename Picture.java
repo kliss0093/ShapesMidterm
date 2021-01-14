@@ -2,8 +2,8 @@
 /**
  * Draw a pretty picture composed of shape objects on a canvas
  * 
- * @author: (Your name)
- * @version: (Date)
+ * @author: Kyle Liss
+ * @version: 1/13/21
  * 
  */
 import java.io.File;
@@ -60,6 +60,7 @@ public class Picture {
         d.moveHorizontal(75);
         d.moveVertical(120);
         d.changeSize(90);
+        // Randomizes the color of the house for a not so static picture
         if(ranNumber == 1)
         {
             d.changeColor("red");
